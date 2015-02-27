@@ -12,7 +12,12 @@
     "express": "~4.11.1",
     "jade": "~1.9.1",
     "morgan": "~1.5.1",
-    "serve-favicon": "~2.2.0"
+    "multer": "^0.1.8",
+    "multer-autoreap": "0.0.8",
+    "q": "^1.2.0",
+    "serve-favicon": "~2.2.0",
+    "xlsjs": "^0.7.5",
+    "xlsx": "^0.7.12"
   },
   "devDependencies": {
     "gulp": "^3.8.11",
