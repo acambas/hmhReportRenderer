@@ -8,12 +8,9 @@ var fs = require('fs');
 
 /* GET home page. */
 router.post('/upload', function(req, res, next) {
-    var path = app.dirname + '\\' + req.files.file.path;
-    console.log(path);
     fs.exists('./' + req.files.file.path, function(exists){
-        console.log(exists);
         if(exists){
-            var workbook = XLSX.readFile(path);
+            var workbook = XLSX.readFile('./' + req.files.file.path);
             var data = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);
             res.json(data);
         }else{
